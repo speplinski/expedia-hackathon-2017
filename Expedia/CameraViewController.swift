@@ -17,7 +17,7 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
     
     var timer: Timer? = nil
     
-    public var uploadType:String = "hotel" //@ Should be hotel | room 
+    public var uploadType: String = "hotel" //@ Should be hotel | room
     
     @IBAction func cancelView(_ sender: Any) {
         self.presentingViewController!.dismiss(animated: true, completion: nil)
@@ -619,14 +619,12 @@ class CameraViewController: UIViewController, AVCaptureFileOutputRecordingDelega
                     if let photoData = photoCaptureDelegate.photoData {
                         DispatchQueue.main.async { 
                             
+                            print("uploadType = \(self.uploadType)")
+                            
                             let url = try! URLRequest(url: "http://35.187.48.156/upload?type=\(self.uploadType)", method: .post)
                             
                             Alamofire.upload(multipartFormData: { multipartFormData in
-                                //if let _image = UIImage(named:"") {
-                                //    if let imageData = UIImagePNGRepresentation(_image) {
-                                        multipartFormData.append(photoData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
-                                //    }
-                                //}
+                                multipartFormData.append(photoData, withName: "image", fileName: "image.jpg", mimeType: "image/jpeg")
                             }, with: url, encodingCompletion: {
                                 encodingResult in
                                 switch encodingResult {
