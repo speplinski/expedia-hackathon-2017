@@ -2,11 +2,12 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "1.2 Home - Hotels.png",
+      "filename" : "Record Button.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Record Button@2x.png",
       "scale" : "2x"
     },
     {

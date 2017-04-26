@@ -38,15 +38,19 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="71"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-fO-YBg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aCY-DA-6EO">
-                                                    <rect key="frame" x="16" y="8" width="222" height="21"/>
+                                                    <rect key="frame" x="72" y="8" width="295" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.99989169836044312" green="1" blue="0.99988096952438354" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tuo-QM-fs3">
-                                                    <rect key="frame" x="16" y="30" width="300" height="34"/>
+                                                    <rect key="frame" x="72" y="30" width="295" height="34"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <string key="text">Label Label Label abel Label Label Label
 sdfds</string>
@@ -54,10 +58,16 @@ sdfds</string>
                                                     <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jDX-fO-YBg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="72"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vco-Ig-6MY">
+                                                    <rect key="frame" x="8" y="8" width="56" height="56"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                </button>
+                                                    <color key="backgroundColor" red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="10"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </view>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.094117647058823528" green="0.094117647058823528" blue="0.094117647058823528" alpha="1" colorSpace="calibratedRGB"/>
@@ -82,6 +92,7 @@ sdfds</string>
                             </activityIndicatorView>
                         </subviews>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
                         <outlet property="loader" destination="YnA-Xo-aPc" id="Mfy-TN-V2g"/>
                         <outlet property="tableView" destination="Vtk-Jc-elZ" id="onG-98-VWg"/>
@@ -108,17 +119,17 @@ sdfds</string>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ax7-6I-OYY">
-                                <rect key="frame" x="0.0" y="617" width="188" height="50"/>
+                                <rect key="frame" x="0.0" y="0.0" width="120" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Home"/>
+                                <state key="normal" title="Back"/>
                                 <connections>
                                     <action selector="goToHome:" destination="dMI-Sk-vMn" eventType="touchUpInside" id="mue-q1-70Y"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T7F-qC-IAj">
-                                <rect key="frame" x="187" y="617" width="188" height="50"/>
+                                <rect key="frame" x="245" y="215" width="130" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Camera"/>
+                                <state key="normal" title="&gt;"/>
                                 <connections>
                                     <segue destination="Ak1-Ja-liQ" kind="presentation" id="PrF-TT-Jdz"/>
                                 </connections>
@@ -129,7 +140,7 @@ sdfds</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qFi-Ho-hEp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-102" y="593"/>
+            <point key="canvasLocation" x="-103.2" y="592.35382308845578"/>
         </scene>
         <!--Camera View Controller-->
         <scene sceneID="cZn-rp-BHi">
@@ -143,10 +154,6 @@ sdfds</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Video" translatesAutoresizingMaskIntoConstraints="NO" id="ky2-Eq-CeH">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Camera Unavailable" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="909-aH-nUi">
                                 <rect key="frame" x="0.0" y="243" width="375" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
@@ -189,7 +196,7 @@ sdfds</string>
                                 </connections>
                             </segmentedControl>
                             <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PYU-C3-m4p">
-                                <rect key="frame" x="0.0" y="504" width="143" height="30"/>
+                                <rect key="frame" x="0.0" y="479" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Record"/>
                                 <connections>
@@ -197,21 +204,28 @@ sdfds</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-Ib-fHy">
-                                <rect key="frame" x="116" y="629" width="143" height="30"/>
+                                <rect key="frame" x="116" y="400" width="143" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Photo"/>
                                 <connections>
                                     <action selector="capturePhoto:" destination="Ak1-Ja-liQ" eventType="touchUpInside" id="4eN-PR-UR6"/>
                                 </connections>
                             </button>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yEa-gN-3qw">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                            </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TGu-iA-phh" userLabel="Preview" customClass="PreviewView" customModule="Expedia" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="44" width="375" height="623"/>
+                                <rect key="frame" x="0.0" y="21" width="375" height="500"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="539-Tu-sY4">
-                                        <rect key="frame" x="232" y="8" width="143" height="30"/>
+                                        <rect key="frame" x="283" y="0.0" width="92" height="44"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Camera"/>
+                                        <state key="normal" title="Camera">
+                                            <color key="titleColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="changeCamera:" destination="Ak1-Ja-liQ" eventType="touchUpInside" id="5T1-Ho-VVP"/>
                                         </connections>
@@ -223,10 +237,13 @@ sdfds</string>
                                     <outletCollection property="gestureRecognizers" destination="yS0-uL-nDM" appends="YES" id="pNp-W9-Ino"/>
                                 </connections>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngF-0x-9t9">
-                                <rect key="frame" x="131" y="585" width="98" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Record"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ngF-0x-9t9">
+                                <rect key="frame" x="136" y="544" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <state key="normal" backgroundImage="Record Button"/>
+                                <state key="selected" backgroundImage="Record Button Over"/>
+                                <state key="highlighted" backgroundImage="Record Button Over"/>
+                                <state key="focused" backgroundImage="Record Button Over"/>
                                 <connections>
                                     <action selector="touchDown:" destination="Ak1-Ja-liQ" eventType="touchDown" id="Tf9-Ng-9c6"/>
                                     <action selector="touchUpInside:" destination="Ak1-Ja-liQ" eventType="touchUpInside" id="GrJ-3Z-LnI"/>
@@ -234,9 +251,11 @@ sdfds</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cvG-oJ-al1">
-                                <rect key="frame" x="0.0" y="0.0" width="80" height="44"/>
+                                <rect key="frame" x="0.0" y="572" width="80" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Done">
+                                    <color key="titleColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelView:" destination="Ak1-Ja-liQ" eventType="touchUpInside" id="jX8-FH-VzR"/>
                                 </connections>
@@ -244,6 +263,7 @@ sdfds</string>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics"/>
                     <connections>
                         <outlet property="cameraButton" destination="539-Tu-sY4" id="BUt-0S-nC9"/>
                         <outlet property="cameraUnavailableLabel" destination="909-aH-nUi" id="Ajg-L2-A94"/>
@@ -325,6 +345,7 @@ sdfds</string>
         <image name="Add New Hotel" width="375" height="667"/>
         <image name="Home" width="375" height="667"/>
         <image name="Properties" width="375" height="667"/>
-        <image name="Video" width="375" height="667"/>
+        <image name="Record Button" width="200" height="200"/>
+        <image name="Record Button Over" width="200" height="200"/>
     </resources>
 </document>
