@@ -16,6 +16,8 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
     
     var currentTag: Int?
     
+    var currentStatus: String?
+    
     var arrRes: [PropertyItem] = []
     
     @IBOutlet weak var propertyName: UILabel!
@@ -67,8 +69,11 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
                     self.arrRes.append(PropertyItem(name: item.string!, isLabel: false, isHotelAmenity: false))
                 }
                 
+                self.currentStatus = response["status"].string
+                print(self.currentStatus!)
+                
                 if response["status"].string == "in_progress" {
-                    let when = DispatchTime.now() + 5
+                    let when = DispatchTime.now() + 3
                     DispatchQueue.main.asyncAfter(deadline: when)  {
                         self.getStatus()
                     }
@@ -131,6 +136,13 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
             } else {
                 ( cell as! PropertyTitleTableViewCell ).button.addTarget(self, action: #selector(scanRoom), for: .touchUpInside)
             }
+            
+            if currentStatus != "done" {
+                ( cell as! PropertyTitleTableViewCell ).showProgress()
+            } else {
+                ( cell as! PropertyTitleTableViewCell ).hideProgress()
+            }
+            
         } else {
             cell = tableView.dequeueReusableCell(withIdentifier:  "PropertyItemTableViewCell")! as! PropertyItemTableViewCell
             ( cell as! PropertyItemTableViewCell ).name.text = item.name

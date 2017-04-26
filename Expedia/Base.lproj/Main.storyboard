@@ -167,7 +167,7 @@ sdfds</string>
                                             <outlet property="progress" destination="UqT-7B-p9w" id="v1a-Dg-uL9"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PropertyItemTableViewCell" id="Qdd-WT-GJC" customClass="PropertyItemTableViewCell" customModule="Expedia" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PropertyItemTableViewCell" id="Qdd-WT-GJC" customClass="PropertyItemTableViewCell" customModule="Expedia" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="72" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Qdd-WT-GJC" id="vhA-vh-APx">
