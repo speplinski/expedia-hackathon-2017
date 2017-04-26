@@ -14,6 +14,8 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
     
     var property: Property?
     
+    var currentTag: Int?
+    
     var arrRes: [PropertyItem] = []
     
     @IBOutlet weak var propertyName: UILabel!
@@ -82,8 +84,23 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
     }
     
     func removeItem(sender: UIButton) {
-        arrRes.remove(at: sender.tag)
+        
+        let item: PropertyItem = arrRes[sender.tag]
+        
+        self.currentTag = sender.tag
+        
+        let alert = UIAlertController(title: "Delete Amenity", message: "Are you sure you want to delete \(item.name!)?", preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
+        alert.addAction(UIAlertAction(title: "Delete", style: .default, handler: { action in
+            self.removeItemConfirmed()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    func removeItemConfirmed() {
+        arrRes.remove(at: self.currentTag!)
         self.tableView.reloadData()
+        self.currentTag = -1
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
