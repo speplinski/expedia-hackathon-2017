@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		0438AABFACEB1B77581DC1B5 /* Pods_Expedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 033F5E9ECFE7C298053CEAE9 /* Pods_Expedia.framework */; };
+		1C0C28FE1EB091AC00E0CBF5 /* PropertyTitleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C28FD1EB091AC00E0CBF5 /* PropertyTitleTableViewCell.swift */; };
+		1C0C29001EB091EB00E0CBF5 /* PropertyItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C0C28FF1EB091EB00E0CBF5 /* PropertyItemTableViewCell.swift */; };
 		1CB6C6BD1EAF368A00586D1C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB6C6BC1EAF368A00586D1C /* AppDelegate.swift */; };
 		1CB6C6BF1EAF368A00586D1C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CB6C6BE1EAF368A00586D1C /* RootViewController.swift */; };
 		1CB6C6C61EAF368A00586D1C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CB6C6C41EAF368A00586D1C /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 /* Begin PBXFileReference section */
 		033F5E9ECFE7C298053CEAE9 /* Pods_Expedia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expedia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0AF490BFE99CC85F1A13ADAD /* Pods-Expedia.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expedia.release.xcconfig"; path = "Pods/Target Support Files/Pods-Expedia/Pods-Expedia.release.xcconfig"; sourceTree = "<group>"; };
+		1C0C28FD1EB091AC00E0CBF5 /* PropertyTitleTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyTitleTableViewCell.swift; sourceTree = "<group>"; };
+		1C0C28FF1EB091EB00E0CBF5 /* PropertyItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PropertyItemTableViewCell.swift; sourceTree = "<group>"; };
 		1CB6C6B91EAF368A00586D1C /* Expedia.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expedia.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CB6C6BC1EAF368A00586D1C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1CB6C6BE1EAF368A00586D1C /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				1CCEC21A1EAFD1960071D47C /* Property.swift */,
 				1CCEC21C1EAFD1EE0071D47C /* PropertyTableViewCell.swift */,
 				1CCEC21E1EAFD7B50071D47C /* SwiftyJSONTransformer.swift */,
+				1C0C28FD1EB091AC00E0CBF5 /* PropertyTitleTableViewCell.swift */,
+				1C0C28FF1EB091EB00E0CBF5 /* PropertyItemTableViewCell.swift */,
 			);
 			path = Expedia;
 			sourceTree = "<group>";
@@ -241,6 +247,7 @@
 			files = (
 				1CCEC21B1EAFD1960071D47C /* Property.swift in Sources */,
 				1CEC623D1EAFBB1C00FBC7BD /* AddNewHotelViewController.swift in Sources */,
+				1C0C29001EB091EB00E0CBF5 /* PropertyItemTableViewCell.swift in Sources */,
 				1CCEC21D1EAFD1EE0071D47C /* PropertyTableViewCell.swift in Sources */,
 				1CB6C6D91EAF586300586D1C /* PhotoCaptureDelegate.swift in Sources */,
 				1CB6C6D71EAF55CA00586D1C /* PreviewView.swift in Sources */,
@@ -249,6 +256,7 @@
 				1CB6C6D51EAF503100586D1C /* CameraViewController.swift in Sources */,
 				1CB6C6DB1EAF7A2E00586D1C /* ExpediaApi.swift in Sources */,
 				1CB6C6D31EAF48DF00586D1C /* PropertyViewController.swift in Sources */,
+				1C0C28FE1EB091AC00E0CBF5 /* PropertyTitleTableViewCell.swift in Sources */,
 				1CB6C6BD1EAF368A00586D1C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
