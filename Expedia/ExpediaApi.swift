@@ -62,5 +62,6 @@ class ExpediaApi
     var upload: Resource { return service.resource("/upload") }
     var new: Resource { return service.resource("/new") }
     var list: Resource { return service.resource("/list") }
+    var status: Resource { return service.resource("/status") }
 }
 
