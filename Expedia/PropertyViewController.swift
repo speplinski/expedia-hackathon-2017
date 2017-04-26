@@ -40,6 +40,14 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
+        self.getStatus()
+        
+        //self.loader.startAnimating()
+        self.tableView.isHidden = true
+    }
+
+    func getStatus()
+    {
         api.status.request(.get).onFailure {_ in
             print("Error")
             }.onSuccess {data in
@@ -57,15 +65,18 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
                     self.arrRes.append(PropertyItem(name: item.string!, isLabel: false, isHotelAmenity: false))
                 }
                 
+                if response["status"].string == "in_progress" {
+                    let when = DispatchTime.now() + 5
+                    DispatchQueue.main.asyncAfter(deadline: when)  {
+                        self.getStatus()
+                    }
+                }
+                
                 self.tableView.reloadData()
                 //self.loader.stopAnimating()
                 self.tableView.isHidden = false
         }
-        
-        //self.loader.startAnimating()
-        self.tableView.isHidden = true
     }
-
     
     func scanHotel()
     {
