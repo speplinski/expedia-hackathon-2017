@@ -20,6 +20,8 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
     
     var arrRes: [PropertyItem] = []
     
+    var timer: Timer? = nil
+    
     @IBOutlet weak var propertyName: UILabel!
     
     @IBOutlet weak var propertyAddress: UILabel!
@@ -49,6 +51,24 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
         //self.loader.startAnimating()
         self.tableView.isHidden = true
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        
+        super.viewWillDisappear(animated)
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        if timer != nil {
+            timer?.invalidate()
+            timer = nil
+        }
+        
+        super.viewDidDisappear(animated)
+    }
 
     func getStatus()
     {
@@ -70,14 +90,22 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
                 }
                 
                 self.currentStatus = response["status"].string
-                print(self.currentStatus!)
+                debugPrint(self.currentStatus!)
                 
-                //if response["status"].string == "in_progress" {
-                    let when = DispatchTime.now() + 3
-                    DispatchQueue.main.asyncAfter(deadline: when)  {
-                        self.getStatus()
+                if self.currentStatus == "done" {
+                    api.save.request(.get).onSuccess {data in
+                        //debugPrint(data)
                     }
-                //}
+                }
+                
+                if self.timer == nil {
+                    self.timer =  Timer.scheduledTimer(
+                        timeInterval: TimeInterval(5.0),
+                        target      : self,
+                        selector    : #selector(self.getStatus),
+                        userInfo    : nil,
+                        repeats     : true)
+                }
                 
                 self.tableView.reloadData()
                 //self.loader.stopAnimating()

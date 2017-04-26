@@ -63,5 +63,6 @@ class ExpediaApi
     var new: Resource { return service.resource("/new") }
     var list: Resource { return service.resource("/list") }
     var status: Resource { return service.resource("/status") }
+    var save: Resource { return service.resource("/save") }
 }
 
