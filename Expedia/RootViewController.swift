@@ -25,6 +25,9 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.isHidden = true
+        
+        self.loader.startAnimating()
+        self.tableView.isHidden = true
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -38,9 +41,6 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
                 self.loader.stopAnimating()
                 self.tableView.isHidden = false
         }
-        
-        self.loader.startAnimating()
-        self.tableView.isHidden = true
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
