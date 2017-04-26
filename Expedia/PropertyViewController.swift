@@ -72,12 +72,12 @@ class PropertyViewController: UIViewController, UITableViewDelegate, UITableView
                 self.currentStatus = response["status"].string
                 print(self.currentStatus!)
                 
-                if response["status"].string == "in_progress" {
+                //if response["status"].string == "in_progress" {
                     let when = DispatchTime.now() + 3
                     DispatchQueue.main.asyncAfter(deadline: when)  {
                         self.getStatus()
                     }
-                }
+                //}
                 
                 self.tableView.reloadData()
                 //self.loader.stopAnimating()
