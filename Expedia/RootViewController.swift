@@ -22,7 +22,6 @@ class RootViewController: UIViewController, UITableViewDelegate, UITableViewData
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //self.tableView.separatorStyle = UITableViewCellSeparatorStyle.none
         self.tableView.delegate = self
         self.tableView.dataSource = self
         self.tableView.isHidden = true
