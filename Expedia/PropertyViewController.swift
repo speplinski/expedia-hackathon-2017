@@ -20,6 +20,20 @@ class PropertyViewController: UIViewController {
         super.viewDidLoad()
     }
     
+    func scanHotel(_ sender: Any)
+    {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "CameraViewControler") as! CameraViewController
+        view.uploadType = "hotel"
+        self.present(view, animated: true)
+    }
+    
+    func scanRoom(_ sender: Any)
+    {
+        let view = self.storyboard?.instantiateViewController(withIdentifier: "CameraViewControler") as! CameraViewController
+        view.uploadType = "room"
+        self.present(view, animated: true)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
